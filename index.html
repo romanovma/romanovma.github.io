@@ -1,15 +1,26 @@
 <!DOCTYPE html>
+
 <html>
 	<head>
 		<title>Эля</title>
 		<!-- link to main stylesheet -->
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                <script>
+                  $("#button")[0].onclick = null;
+                  $("#button").click(function() { 
+                    $('#main').text() = 'восхитительная' + '!!'
+                  });
+                </script>   
+    }
+</script>
+
 	</head>
 	<body>
 		<div class="container">
     		<div class="blurb">
-        		<h1>Эля, ты  </h1> 
-        		<h1> <a> узнать какая </a> </h1>
+        		<h1 >Эля, ты  </h1> <h1 id="main"></h1>
+        		<h1> <a href = "google.com" id="button"> узнать какая </a> </h1>
     		</div><!-- /.blurb -->
 		</div><!-- /.container -->
 	</body>
