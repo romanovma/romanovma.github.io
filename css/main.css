@@ -2,14 +2,12 @@ body {
     margin: 60px auto;
     width: 70%;
 }
-button {
-    border: none;
+#button {
     color: #999;
-    font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
-button:hover {
+#button:hover {
     text-decoration: underline;
+    cursor: pointer;
 }
 a {
     text-decoration: none;
