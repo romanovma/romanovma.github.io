@@ -6,19 +6,32 @@
 		<!-- link to main stylesheet -->
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-                <script>
-                  $("#button")[0].onclick = null;
-                  $("#button").click(function() { 
-                    $('#main').text('восхитительная' + '!!');
-                  });
-                </script>
+		<script>
+		$(document).ready(function() {
+			var words = ['ангельски-прекрасная', 'шикарная', 'блестящая', 'неподражаемая', 'гибкая и стройная, всех даров достойная',
+		'ослепительная', 'дивная', 'пьянящая', 'талантливая', 'оглушительная', 'романтичная',
+		'соблазнительная','притягательная', 'сногсшибательная', 'блистательная', 'бесконечно новая',
+		'долгожданная', 'классная','потрясная', 'безупречная'];
+			$("#button")[0].onclick = null;
+			$("#button").click(function() {
+				var num = 0;
+				do {
+				  num = Math.floor((Math.random() * words.length));
+				} while ($('#main').text() == 'Эля, ты ' + words[num] + '!!')
+
+				$('#main').text('Эля, ты ' + words[num] + '!!');
+				$('#button').text('Узнать еще какая');
+			});
+		});
+		</script>
 	</head>
 	<body>
-		<div class="container">
-    		<div class="blurb">
-        		<h1 >Эля, ты  </h1> <h1 id="main"></h1>
-        		<h1> <a href = "" id="button"> узнать какая </a> </h1>
-    		</div><!-- /.blurb -->
+		<div >
+
+        		<h1 id="main">Эля, ты </h1>
+        		<button id="button"> узнать какая  </button>
+
 		</div><!-- /.container -->
+
 	</body>
 </html>
