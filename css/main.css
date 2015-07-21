@@ -2,6 +2,13 @@ body {
     margin: 60px auto;
     width: 70%;
 }
+button {
+    border: none;
+    color: #999;
+}
+button:hover {
+    text-decoration: underline;
+}
 a {
     text-decoration: none;
     color: #999;
